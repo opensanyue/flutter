@@ -8,7 +8,7 @@ class App extends StatelessWidget{
     return MaterialApp(
       title: '第一个例子',
       home: Scaffold(
-        appBar: AppBar(title: Text('第一个flutter例子'),),
+        appBar: AppBar(title: Text('第一个flutter例子,vscode'),),
         body: Center(child: Text('这是我们的第一个flutter例子'),),
         ),
     );
