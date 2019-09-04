@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget{
   }
 }
 
+// 静态横向listview
 class List2 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -48,6 +49,7 @@ class List2 extends StatelessWidget{
   }
 }
 
+// 静态listview
 class List1 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
