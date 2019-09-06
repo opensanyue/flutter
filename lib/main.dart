@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
-
-void main()=>runApp(App());
-
-class App extends StatelessWidget{
+void main()=>runApp(MyApp());
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    var stack=Stack(
+      alignment: const FractionalOffset(0.5, 0.8),
+      children: <Widget>[
+        CircleAvatar(
+          backgroundImage: NetworkImage('http://blogimages.jspang.com/blogtouxiang1.jpg'),
+          radius:100.0),
+
+          Container(
+            decoration: BoxDecoration(color:Colors.red),
+            padding:  EdgeInsets.all(5.0),
+            child: Text('jspan技术胖'),),
+      ],
+    );
+
     return MaterialApp(
-      title: '第一个例子',
+      title: 'stack基本入门',
       home: Scaffold(
-        appBar: AppBar(title: Text('第一个flutter例子'),),
-        body: Center(child: Text('这是我们的第一个flutter例子'),),
-        ),
+        appBar: AppBar(title:Text('satck基本入门')),
+        body:Center(child: stack,),
+      ),
     );
   }
 }
