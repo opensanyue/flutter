@@ -1,16 +1,38 @@
 import 'package:flutter/material.dart';
 
-void main()=>runApp(App());
+void main()=>runApp(MyApp());
 
-class App extends StatelessWidget{
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    var stack=Stack(
+        children: <Widget>[
+          CircleAvatar(
+            backgroundImage: NetworkImage('http://blogimages.jspang.com/blogtouxiang1.jpg'),
+            radius: 150,
+          ),
+
+          Positioned(
+            top: 100.0,
+            child: Text('技术胖'),
+          ),
+             Positioned(
+               left:100.0,
+            child: Text('技术胖1'),
+          ),
+             Positioned(
+               bottom: 100.0,
+            child: Text('技术胖2'),
+          ),
+        ],
+    );
+
     return MaterialApp(
-      title: '第一个例子',
+      title: 'positioned基本入门',
       home: Scaffold(
-        appBar: AppBar(title: Text('第一个flutter例子'),),
-        body: Center(child: Text('这是我们的第一个flutter例子'),),
-        ),
+        appBar: AppBar(title: Text('positioned基本入门'),),
+        body: Center(child: stack),
+      ),
     );
   }
 }
